@@ -73,26 +73,104 @@ img{
 /* Header */
 
 .header{
-    min-height: 60rem;
+    min-height:60rem;
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     padding: 5rem 0;
 }
-@media (min-width: 900) {
-    .header{
-        padding: 2rem 0;
-    }
-}
 
 .contenido-header{
     display: flex;
     flex-direction: column;
+    height: calc(60rem - 4rem);
     justify-content: space-between;
+    color: var(--blanco)
 }
-.barra{
-    display: flex;
-    justify-content: space-between;
+.nombre-sitio{
+    font-weight: 100;
+    text-align: center;
+    font-size: 3rem;
+}
+@media (min-width: 900px) {
+    .nombre-sitio{
+        font-size: 4rem;
+    }
+}
+.nombre-sitio span{
+    font-weight: 900;
+}
 
+@media (min-width: 900px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 900px) {
+    .contacto{
+        align-items: flex-end;
+    }
+}
+.telefono{
+    display: flex;
+    align-items: center;
+}
+.telefono::before{
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/telefono.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header a{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 900px) {
+    .nav{
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+.nav a{
+    padding: 1rem 2rem;
+}
+.nav a:hover{
+    background-color: rgba(255 255 255 / .5);
+}
+.slogan{
+    text-align: center;
+}
+@media (min-width: 900px) {
+    .slogan{
+        text-align: right;
+    }
+}
+.slogan h1{
+    font-size: 3rem;
+    margin: 0;
+}
+@media (min-width: 900px) {
+    .slogan h1{
+        font-size: 5rem;
+    }
+    .slogan p{
+        font-size: 2rem;
+        margin: 0;
+    }
 }
